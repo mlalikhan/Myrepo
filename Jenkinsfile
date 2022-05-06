@@ -1,11 +1,11 @@
-pipeline{
-  agent { docker { image 'php:8.1.0-alpine' } }
+pipeline {
+  agent { docker { image 'python3.10.1-alpine' } }
   stages   {
-      stage('build')
-    steps {
-      sh 'php --version'
+    stage('build') {
+        steps {
+            sh 'python --version'
     }
   }
 }
-
+}
 
